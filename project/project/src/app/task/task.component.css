@@ -1,0 +1,125 @@
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 122, 204, 0.10);
+  max-width: 600px;
+  margin: 3rem auto;
+  overflow: hidden;
+}
+
+.task-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #e3f0ff 0%, #b3d8fd 100%);
+  padding: 1.5rem 2rem;
+  border-bottom: 1.5px solid #e3f0ff;
+}
+
+.task-list-header h1 {
+  margin: 0;
+  color: #007acc;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+
+.task-list-header button {
+  background: #007acc;
+  color: #fff;
+  padding: 0.7em 2em;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 122, 204, 0.08);
+  border: none;
+  transition: background 0.2s;
+}
+
+.task-list-header button:hover {
+  background: #005fa3;
+}
+
+.task-item {
+  background: #fff;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 122, 204, 0.13);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1.2rem 2rem;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.task-header h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #222;
+  font-weight: 600;
+}
+
+.task-status {
+  padding: 0.4em 1em;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background: #e3f0ff;
+  color: #007acc;
+  border: 1px solid #b3d8fd;
+}
+
+.task-status.completed {
+  background: #d4edfa;
+  color: #007acc;
+  border-color: #a3d0f7;
+}
+
+.task-status.pending {
+  background: #fff3cd;
+  color: #856404;
+  border-color: #ffeeba;
+}
+
+button:not(.task-status) {
+  background: #fff;
+  color: #007acc;
+  border: 1px solid #b3d8fd;
+  border-radius: 8px;
+  padding: 0.4em 1em;
+  margin-left: 0.5em;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+button:not(.task-status):hover {
+  background: #007acc;
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .task-list-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .task-list-header button {
+    width: 100%;
+  }
+  .task-item {
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,15 @@
+<div class="task-list">
+  <div class="task-list-header">
+    <h1>Task List</h1>
+    <button [routerLink]="['/add-task']">Add Task</button>
+  </div>
+  <div *ngFor="let task of tasks" class="task-item">
+    <div class="task-header">
+      <h3>{{ task.title }}</h3>
+      <button class="task-status">
+        {{ task.completed ? 'Completed' : 'Pending' }}
+      </button>
+      <button (click)="deleteTask(task.id!)">Delete</button>
+    </div>
+  </div>
+</div>

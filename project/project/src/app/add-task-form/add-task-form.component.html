@@ -1,0 +1,16 @@
+<h2>Add New Task</h2>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label>Title:</label>
+    <input type="text" [(ngModel)]="title" name="title" required>
+  </div>
+  
+  <div>
+    <label>
+      <input type="checkbox" [(ngModel)]="completed" name="completed">
+      Completed
+    </label>
+  </div>
+  
+  <button type="submit">Save Task</button>
+</form>
